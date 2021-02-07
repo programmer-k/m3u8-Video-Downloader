@@ -8,8 +8,6 @@ for ((i=1;i<=num_sub_id;i++));
 do
 	sub_id=$((i * 2 + 1))
 	filename=$(((i + 1) * 2))
-	#echo ${!sub_id}
-	#echo ${!filename}
 	ffmpeg -i "${link_prefix}${main_id}/${!sub_id}/${!filename}${link_suffix}" -vcodec copy -acodec copy -absf aac_adtstoasc ${!filename}
 done;
 

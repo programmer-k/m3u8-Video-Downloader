@@ -4,5 +4,5 @@ id=$1
 
 for filename in "${@:2}"
 do
-	ffmpeg -i "${link_prefix}${id}/${filename}${link_suffix}" -vcodec copy -acodec copy -absf aac_adtstoasc ${filename}
+	ffmpeg -i "${link_prefix}${id}/${filename}${link_suffix}" -vcodec copy -acodec copy ${filename}
 done
